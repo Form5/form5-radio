@@ -1,0 +1,56 @@
+radio {
+  -webkit-transition: background 150ms, color 150ms;
+  -moz-transition: background 150ms, color 150ms;
+  transition: background 150ms, color 150ms;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  line-height: 28px; }
+  radio.small {
+    line-height: 22px; }
+  radio.large {
+    line-height: 34px; }
+  radio:before {
+    content: '\221A';
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    color: rgba(65, 72, 94, 0.5);
+    background: rgba(65, 72, 94, 0.1);
+    width: 24px;
+    height: 24px; }
+    radio:before.small {
+      width: 18px;
+      height: 18px; }
+    radio:before.large {
+      width: 30px;
+      height: 30px; }
+  radio[checked]:before {
+    background: #EE6969;
+    color: white; }
+  radio input[type='radio'] {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    width: 12px;
+    height: 13px; }
+  radio[debug] input[type='radio'] {
+    opacity: 0.5;
+    top: 8px;
+    left: 11px; }
+  radio[data-label] {
+    padding: 0 5px; }
+    radio[data-label]:after {
+      content: attr(data-label);
+      padding-left: 10px;
+      font-size: 14px; }
+
+radio:before {
+  border-radius: 100%; }

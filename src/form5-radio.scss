@@ -1,0 +1,88 @@
+// Styles for checkboxes and radio buttons (works with js)
+
+radio {
+  $radio-small: 18px;
+  $radio-medium: 24px;
+  $radio-large: 30px;
+
+  -webkit-transition: background 150ms, color 150ms;
+  -moz-transition: background 150ms, color 150ms;
+  transition: background 150ms, color 150ms;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+
+  line-height: $radio-medium + 4;
+
+  &.small { line-height: $radio-small + 4; }
+  &.large { line-height: $radio-large + 4; }
+
+  &:before {
+    @extend icon;
+    content: '\221A';
+    display: inline-block;
+
+    font-size: 12px;
+    text-align: center;
+    color: rgba(#41485E,0.5);
+
+    background: rgba(#41485E,0.1);
+
+    width: $radio-medium;
+    height: $radio-medium;
+
+    &.small {
+      width: $radio-small;
+      height: $radio-small;
+    }
+
+    &.large {
+      width: $radio-large;
+      height: $radio-large;
+    }
+  }
+
+  &[checked]:before {
+    background: #EE6969;
+    color: white;
+  }
+
+  input[type='radio'] {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    width: 12px;
+    height: 13px;
+  }
+
+  &[debug] {
+    input[type='radio'] {
+      opacity: 0.5;
+      top: 8px;
+      left: 11px;
+    }
+  }
+
+  &[data-label] {
+    padding: 0 5px;
+
+    &:after {
+      content: attr(data-label);
+      padding-left: 10px;
+
+      font-size: 14px;
+    }
+  }
+}
+
+radio:before {
+  border-radius: 100%;
+}
