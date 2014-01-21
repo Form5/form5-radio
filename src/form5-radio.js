@@ -77,15 +77,15 @@
 
   $.fn[pluginName] = function (options) {
     return this.each(function () {
-      if (!$(this).data(pluginName)) {
+      if (!$(this).data('form5-'+pluginName)) {
         if (options === 'destroy') return;
-        $(this).data(pluginName, new $[pluginName](this, options));
+        $(this).data('form5-'+pluginName, new $[pluginName](this, options));
       } else {
-        var $form5Radio = $(this).data(pluginName);
+        var $form5Radio = $(this).data('form5-'+pluginName);
         switch (options) {
           case 'destroy':
             $form5Radio.destroy();
-            $(this).removeData(pluginName);
+            $(this).removeData('form5-'+pluginName);
             break;
           default:
             return;
