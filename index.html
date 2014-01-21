@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+      <meta charset="utf-8">
+      <title>form5-radio</title>
+
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono">
+
+      <link rel="stylesheet" href="styles.css">
+
+      <link rel="stylesheet" href="form5-radio.min.css">
+      <link rel="stylesheet" href="http://form5.github.io/form5-tabs/form5-tabs.min.css">
+  </head>
+  <body>
+
+    <div class="container clearfix">
+      <h1>form5-radio</h1>
+
+      <p>
+        form5-radio is a simple jQuery plugin to skin radio buttons. Only <strong>2KB</strong> of minified Javascript, along with your own styles (very basic demo styles are provided).
+      </p>
+
+      <a href="https://github.com/Form5/form5-radio">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+      </a>
+
+    <tabs>
+      </tab>
+      <tab>
+        <h2 class="heading">Getting started</h2>
+
+        <h3>How to fetch form5-radio?</h2>
+
+        <p>Install with <a href="http://bower.io">Bower</a>: <code>bower install form5-radio</code></p>
+
+        <p>Clone the Github project: <code>git clone https://github.com/Form5/form5-radio.git</code></p>
+
+        <p>Or <a href="https://github.com/Form5/form5-radio/archive/master.zip">download zip</a>.</p>
+
+        <h3>Then what?</h3>
+
+        <p>
+          After installation simply load the files along with other styles and scripts. Remember that this script requires jQuery, meaning jQuery should already be loaded before this script. We recommend using the latest stable release.
+        </p>
+        <script src="https://gist.github.com/benediktvaldez/ebf50c73cd2de5a60406.js"></script>
+
+        <p>
+          No need for any special markup, form5-tabs should target inputs directly. Simply create an input with <code>type='radio'</code> and the plugin will generate a new element like so.
+        </p>
+        <script src="https://gist.github.com/benediktvaldez/316f1f2795b983540262.js"></script>
+
+        <h4>Live example</h4>
+
+        <p>
+          <input name="radiogroup" type="radio">
+          <input name="radiogroup" type="radio" checked>
+          <input name="radiogroup" type="radio">
+        </p>
+
+        <h3>What about labels?</h3>
+
+        <p>
+          There is a way to include labels directly with this plugin, or simply by adding the <code>data-label='...'</code> attribute to your <code>input</code>, which will allow you to append the contents in a pseudo element for example.
+        </p>
+
+        <h4>Live example (with labels)</h4>
+
+        <p>
+          <input name="radiogroup2" type="radio" data-label="Label 1">
+          <input name="radiogroup2" type="radio" data-label="Label 2" checked>
+          <input name="radiogroup2" type="radio" data-label="Label 3">
+        </p>
+      </tab>
+      <tab>
+        <h2 class="heading">Advanced usage</h2>
+
+        <h3>Options</h3>
+
+        <p>
+          There are not many ways to configure the scripts functionality, except for event based callbacks. Here you can see all the options with their default values, and below you can find more detailed description for each option.
+        </p>
+        <script src="https://gist.github.com/benediktvaldez/2e49285a469a732e41de.js"></script>
+
+        <p><code>toggle: function ()</code> <small><strong>Default: function() {}</strong></small></p>
+
+        <p>Optional function to be ran each time a radio button is checked.</p>
+
+        <p><code>init: function ()</code> <small><strong>Default: function() {}</strong></small></p>
+
+        <p>Optional function to be ran at initialization.</p>
+
+        <p><code>debug: boolean</code> <small><strong>Default: false</strong></small></p>
+
+        <p>
+          If you are having problems and are not sure certain parts of the scripts are actually working, you can enable this option to receive console.logs with messages for initialization, toggling and destroying. This will also add a <code>debug="true"</code> attribute to your new element enabling you to add some styles that might help with debugging.
+        </p>
+
+        <h3>After initialization</h3>
+
+        <p>
+          Sometimes we do things we wish we hadn't, and just wanna take a step back and rethink the situation. For those instances, we included a helper string that enables you to simply reverse all changes made by this script.
+        </p>
+        <script src="https://gist.github.com/benediktvaldez/38bb59f9505913324efc.js"></script>
+
+        <p>
+          After running this, you can initialize some fresh new radio buttons with new options or whatever your mind can imagine.
+        </p>
+
+        <h3>Still not satisfied?</h3>
+
+        <p>
+          You could go all in and customize the script directly. The original can be found in <code>src/form5-radio.js</code>. To compile a minified/uglified version of your new script you can build it again by running:
+        </p>
+        <script src="https://gist.github.com/benediktvaldez/32ab26eaabf2ca551f9e.js"></script>
+
+        <p>
+          If you would like to extend the core functionality of this script in a way that could benefit others, don't hesitate to create a pull request!
+        </p>
+      </tab>
+      <tab>
+        <h2 class="heading">Cress</h2>
+
+        <h3>Using <a href="http://github.com/Form5/Cress" target="_blank">Cress</a>?</h3>
+
+        <p>
+          If you are using our awesome CSS framework Cress, you can find a <code>.scss</code> file using the appropriate variables in <code>src/form5-radio.cress.scss</code>. That way you have a some basic radio buttons working directly with your current styles.
+        </p>
+      </tab>
+      <tab>
+        <h2 class="heading">Author</h2>
+        <p>
+          Written by <a href="http://github.com/benediktvaldez" target="_blank">Benedikt D Valdez</a>,
+          developer at <a href="http://www.form5.is" target="_blank">Form5</a>.
+        </p>
+
+        <h3>Contributors</h3>
+        <p>
+          <a href="http://github.com/arnireynir" target="_blank">Árni Reynir Óskarsson</a>,
+          developer at <a href="http://www.form5.is" target="_blank">Form5</a>.
+        </p>
+      </tab>
+    </tabs>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="form5-radio.min.js"></script>
+    <script src="http://form5.github.io/form5-tabs/form5-tabs.min.js"></script>
+    <script>
+      $(function(){
+        $('input[type=radio]').radio({debug:false});
+        $('tabs').tabs();
+      });
+    </script>
+  </body>
+</html>
