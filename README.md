@@ -35,7 +35,7 @@ loaded before this script. We recommend using the latest stable release.
 </script>
 ```
 
-No need for any special markup, form5-tabs should target inputs directly.
+No need for any special markup, form5-radio should target inputs directly.
 Simply create an input with `type='radio'` and the plugin will generate a new
 element like so.
 
