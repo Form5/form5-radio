@@ -2,12 +2,17 @@
   "name": "form5-radio",
   "version": "1.0.1",
   "homepage": "http://form5.github.io/form5-radio",
+  "description": "jQuery plugin to skin radio buttons",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Form5/form5-checkbox.git"
+  },
   "authors": [
     "Benedikt D Valdez <benedikt@form5.is>",
     "Arni Reynir Oskarsson <arni@form5.is>"
   ],
-  "description": "jQuery plugin to skin radio buttons",
   "keywords": [
+    "form5",
     "jquery",
     "radio",
     "form"
